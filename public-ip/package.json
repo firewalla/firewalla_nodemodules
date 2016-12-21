@@ -1,0 +1,63 @@
+{
+  "name": "public-ip",
+  "version": "1.2.0",
+  "description": "Get your public IP address - very fast!",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sindresorhus/public-ip.git"
+  },
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "bin": {
+    "public-ip": "cli.js"
+  },
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "bin",
+    "ip",
+    "ipv4",
+    "ipv6",
+    "address",
+    "external",
+    "public",
+    "machine",
+    "fast",
+    "opendns",
+    "dns"
+  ],
+  "dependencies": {
+    "dns-socket": "^1.0.0",
+    "meow": "^3.3.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "is-ip": "^1.0.0",
+    "xo": "*"
+  },
+  "readme": "# public-ip [![Build Status](https://travis-ci.org/sindresorhus/public-ip.svg?branch=master)](https://travis-ci.org/sindresorhus/public-ip)\n\n> Get your public IP address - very fast!\n\nQueries the DNS records of OpenDNS which has an entry with your IP address.\n\n\n## CLI\n\n```\n$ npm install --global public-ip\n```\n\n```\n$ public-ip --help\n\n  Usage\n    $ public-ip\n\n  Options\n    -4, --ipv4  Return the IPv4 address (default)\n    -6, --ipv6  Return the IPv6 address\n\n  Examples\n    $ public-ip\n    46.5.21.123\n```\n\n```\n$ time public-ip\n46.5.21.123\n\nreal    0.08s\nuser    0.05s\nsys     0.02s\n```\n\n\n## API\n\n```\n$ npm install --save public-ip\n```\n\n```js\nvar publicIp = require('public-ip');\n\npublicIp.v4(function (err, ip) {\n\tconsole.log(ip);\n\t//=> '46.5.21.123'\n});\n\npublicIp.v6(function (err, ip) {\n\tconsole.log(ip);\n\t//=> 'fe80::200:f8ff:fe21:67cf'\n});\n```\n\n\n## Related\n\nSee [internal-ip](https://github.com/sindresorhus/internal-ip) to get your internal IP address.\n\n\n## License\n\nMIT © [Sindre Sorhus](http://sindresorhus.com)\n",
+  "readmeFilename": "readme.md",
+  "bugs": {
+    "url": "https://github.com/sindresorhus/public-ip/issues"
+  },
+  "homepage": "https://github.com/sindresorhus/public-ip#readme",
+  "_id": "public-ip@1.2.0",
+  "_shasum": "d4b074b0554211c0a4b2ac754961ff0f53afa584",
+  "_resolved": "https://registry.npmjs.org/public-ip/-/public-ip-1.2.0.tgz",
+  "_from": "https://registry.npmjs.org/public-ip/-/public-ip-1.2.0.tgz"
+}

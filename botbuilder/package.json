@@ -1,0 +1,41 @@
+{
+  "name": "botbuilder",
+  "author": {
+    "name": "Microsoft Corp."
+  },
+  "description": "Bot Builder is a dialog system for building rich bots on virtually any platform.",
+  "version": "0.6.5",
+  "license": "MIT",
+  "keywords": [
+    "bots",
+    "chatbots"
+  ],
+  "bugs": {
+    "url": "https://github.com/Microsoft/BotBuilder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microsoft/BotBuilder.git"
+  },
+  "main": "./lib/botbuilder.js",
+  "typings": "./lib/botbuilder.d.ts",
+  "dependencies": {
+    "chrono-node": "^1.1.3",
+    "node-uuid": "^1.4.7",
+    "request": "^2.69.0",
+    "sprintf-js": "^1.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  },
+  "scripts": {
+    "test": "mocha tests/*.js"
+  },
+  "readme": "# Bot Builder for Node.js\r\n[Bot Builder for Node.js](http://docs.botframework.com/builder/node/overview/) is a powerful framework for constructing bots that can handle both freeform interactions and more guided ones where the possibilities are explicitly shown to the user. It is easy to use and models frameworks like Express & Restify to provide developers with a familiar way to write Bots.\r\n\r\nHigh Level Features:\r\n\r\n* Powerful dialog system with dialogs that are isolated and composable.\r\n* Built-in prompts for simple things like Yes/No, strings, numbers, enumerations.\r\n* Built-in dialogs that utilize powerful AI frameworks like [LUIS](http://luis.ai).\r\n* Bots are stateless which helps them scale.\r\n* Bots can run on almost any bot platform like the [Microsoft Bot Framework](http://botframework.com), [Skype](http://skype.com), and [Slack](http://slack.com).\r\n \r\n## Build a bot\r\nCreate a folder for your bot, cd into it, and run npm init.\r\n\r\n    npm init\r\n    \r\nGet the BotBuilder and Restify modules using npm.\r\n\r\n    npm install --save botbuilder\r\n    npm install --save restify\r\n    \r\nCreate a file named app.js and say hello in a few lines of code.\r\n \r\n    var restify = require('restify');\r\n    var builder = require('botbuilder');\r\n\r\n    // Create bot and add dialogs\r\n    var bot = new builder.BotConnectorBot({ appId: 'YourAppId', appSecret: 'YourAppSecret' });\r\n    bot.add('/', function (session) {\r\n        session.send('Hello World');\r\n    });\r\n\r\n    // Setup Restify Server\r\n    var server = restify.createServer();\r\n    server.post('/api/messages', bot.verifyBotFramework(), bot.listen());\r\n    server.listen(process.env.port || 3978, function () {\r\n        console.log('%s listening to %s', server.name, server.url); \r\n    });\r\n\r\n## Test your bot (Windows Only)\r\nUse the [Bot Framework Emulator](http://docs.botframework.com/connector/tools/bot-framework-emulator/) to test your bot on localhost. \r\n\r\nInstall the emulator from [here](http://aka.ms/bf-bc-emulator) and then start your bot in a console window.\r\n\r\n    node app.js\r\n    \r\nStart the emulator and say \"hello\" to your bot.\r\n\r\n## Publish your bot\r\nDeploy your bot to the cloud and then [register it](http://docs.botframework.com/connector/getstarted/#registering-your-bot-with-the-microsoft-bot-framework) with the Microsoft Bot Framework. If you're deploying your bot to Microsoft Azure you can use this great guide for [Publishing a Node.js app to Azure using Continuous Integration](https://blogs.msdn.microsoft.com/sarahsays/2015/08/31/building-your-first-node-js-app-and-publishing-to-azure/).\r\n\r\nNOTE: When you register your bot with the Bot Framework you'll want to update the appId & appSecret for both your bot and the emulator with the values assigned to you by the portal.\r\n\r\n## Dive deeper\r\nLearn how to build great bots.\r\n\r\n* [Core Concepts Guide](http://docs.botframework.com/builder/node/guides/core-concepts/)\r\n* [Bot Builder for Node.js Reference](http://docs.botframework.com/sdkreference/nodejs/modules/_botbuilder_d_.html)\r\n",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/Microsoft/BotBuilder#readme",
+  "_id": "botbuilder@0.6.5",
+  "_shasum": "67af362b5d8035089514f4782eb205826ecbd3a9",
+  "_resolved": "https://registry.npmjs.org/botbuilder/-/botbuilder-0.6.5.tgz",
+  "_from": "https://registry.npmjs.org/botbuilder/-/botbuilder-0.6.5.tgz"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "nat-pmp",
+  "version": "1.0.0",
+  "description": "Node.js implementation of the NAT Port Mapping Protocol",
+  "author": {
+    "name": "Nathan Rajlich",
+    "email": "nathan@tootallnate.net",
+    "url": "http://tootallnate.net"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TooTallNate/node-nat-pmp.git"
+  },
+  "keywords": [
+    "nat",
+    "pmp",
+    "nat-pmp",
+    "port",
+    "forward",
+    "map",
+    "mapping",
+    "protocol"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "debug": "~0.7.0"
+  },
+  "devDependencies": {
+    "netroute": "~1.0.2"
+  },
+  "readme": "node-nat-pmp\n============\n### Node.js implementation of the [NAT Port Mapping Protocol][wikipedia]\n\nThis module offers an implementation of the [NAT-PMP][protocol] written in\npure JavaScript. You can use this module to dynamically open and close arbitrary\nTCP and UDP ports against the network's internet gateway device.\n\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install nat-pmp\n```\n\n\nExamples\n--------\n\n``` js\nvar natpmp = require('nat-pmp');\n\n// create a \"client\" instance connecting to your local gateway\nvar client = natpmp.connect('10.0.1.1');\n\n\n// explicitly ask for the current external IP address\nclient.externalIp(function (err, info) {\n  if (err) throw err;\n  console.log('Current external IP address: %s', info.ip.join('.'));\n});\n\n\n// setup a new port mapping\nclient.portMapping({ private: 22, public: 2222, ttl: 3600 }, function (err, info) {\n  if (err) throw err;\n  console.log(info);\n  // {\n  //   type: 'tcp',\n  //   epoch: 8922109,\n  //   private: 22,\n  //   public: 2222,\n  //   ...\n  // }\n});\n```\n\n\nAPI\n---\n\n\n\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\n\n[wikipedia]: http://wikipedia.org/wiki/NAT_Port_Mapping_Protocol\n[protocol]: http://tools.ietf.org/html/draft-cheshire-nat-pmp-03\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/TooTallNate/node-nat-pmp/issues"
+  },
+  "homepage": "https://github.com/TooTallNate/node-nat-pmp#readme",
+  "_id": "nat-pmp@1.0.0",
+  "_shasum": "d5f3fb1dff52d9e20d16ad2aa1c41a54296a8c4a",
+  "_resolved": "https://registry.npmjs.org/nat-pmp/-/nat-pmp-1.0.0.tgz",
+  "_from": "https://registry.npmjs.org/nat-pmp/-/nat-pmp-1.0.0.tgz"
+}

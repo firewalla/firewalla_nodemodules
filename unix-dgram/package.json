@@ -1,0 +1,43 @@
+{
+  "author": {
+    "name": "Ben Noordhuis",
+    "email": "info@bnoordhuis.nl",
+    "url": "http://bnoordhuis.nl/"
+  },
+  "name": "unix-dgram",
+  "version": "0.2.3",
+  "description": "Unix datagram socket",
+  "main": "lib/unix_dgram",
+  "homepage": "https://github.com/bnoordhuis/node-unix-dgram",
+  "license": {
+    "type": "ISC",
+    "url": "https://github.com/bnoordhuis/node-unix-dgram/LICENSE"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bnoordhuis/node-unix-dgram.git"
+  },
+  "engines": {
+    "node": ">=0.7.9"
+  },
+  "dependencies": {
+    "bindings": "~1.1.1",
+    "nan": "~2.3.2"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "scripts": {
+    "test": "node test/test-dgram-unix.js && node test/test-connect.js",
+    "install": "node-gyp rebuild"
+  },
+  "gypfile": true,
+  "readme": "# node-unix-dgram\n\nCommunicate over UNIX datagram sockets.\n\n## Usage\n\nServer:\n\n    // One-shot server.  Note that the server cannot send a reply;\n    // UNIX datagram sockets are unconnected and the client is not addressable.\n    var unix = require('unix-dgram');\n    var server = unix.createSocket('unix_dgram', function(buf) {\n      console.log('received ' + buf);\n      server.close();\n    });\n    server.bind('/path/to/socket');\n\nClient:\n\n    // Send a single message to the server.\n    var message = Buffer('ping');\n    var client = unix.createSocket('unix_dgram');\n    client.on('error', console.error);\n    client.send(message, 0, message.length, '/path/to/socket');\n    client.close();\n\n\n## API\n\nCaveat emptor: events and callbacks are synchronous for efficiency reasons.\n\n### unix.createSocket(type, [listener])\n\nReturns a new unix.Socket object.  `type` should be `'unix_dgram'`.\nThrows an exception if the `socket(2)` system call fails.\n\nThe optional `listener` argument is added as a listener for the `'message'`\nevent.  The event listener receives the message as a `Buffer` object as its\nfirst argument.\n\n### socket.bind(path)\n\nCreate a server at `path`.  Emits a `'listening'` event on success or\nan `'error'` event if the `bind(2)` system call fails.\n\n### socket.connect(remote_path)\n\nAssociate a socket with a remote path so you can send a message without setting\nthe remote path. Once the socket is **connected** it emits a `'connect'` event.\nIt also allows to perform some kind of congestion control as it emits a\n`'congestion'` event when the receiving buffer is full, and a `'writable'` event\nwhen it stops being full.\n\n### socket.send(buf, [callback])\n\nOnly to be used with **connected** sockets. It sends a message to the remote\npath associated with the socket\n\nExample:\n\n    var unix = require('unix-dgram');\n\n    var client = unix.createSocket('unix_dgram');\n\n    client.on('error', function(err) {\n        console.error(err);\n    });\n\n    client.on('connect', function() {\n        console.log('connected');\n        client.on('congestion', function() {\n            console.log('congestion');\n            /* The server is not accepting data */\n        });\n\n        client.on('writable', function() {\n            console.log('writable');\n            /* The server can accept data */\n        });\n\n        var message = new Buffer('PING');\n        client.send(message);\n    });\n\n    client.connect('/tmp/server');\n\n\n### socket.send_to(buf, offset, length, path, [callback]);\n\nSend a message to the server listening at `path`.\n\n`buf` is a `Buffer` object containing the message to send, `offset` is\nthe offset into the buffer and `length` is the length of the message.\n\nFor backwards compatibility, you can still use the `socket.send` function with\nthis same signature.\n\nExample:\n\n    var buf = new Buffer('foobarbaz');\n    socket.send(buf, 3, 4, '/path/to/socket');  // Sends 'barb'.\n\n### socket.close()\n\nClose the socket.  If the socket was bound to a path with `socket.bind()`,\nthen you will no longer receive new messages.  The file system entity\n(the socket file) is not automatically unlinked.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/bnoordhuis/node-unix-dgram/issues"
+  },
+  "_id": "unix-dgram@0.2.3",
+  "_shasum": "eab7330f1f1041d48f9c179d9f4c5a996cafceb5",
+  "_resolved": "https://registry.npmjs.org/unix-dgram/-/unix-dgram-0.2.3.tgz",
+  "_from": "https://registry.npmjs.org/unix-dgram/-/unix-dgram-0.2.3.tgz"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "stats-lite",
+  "version": "2.0.3",
+  "description": "A light statistical package that operates on numeric Arrays.",
+  "main": "stats.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brycebaril/node-stats-lite.git"
+  },
+  "keywords": [
+    "stats",
+    "statistics",
+    "numbers",
+    "math",
+    "sum",
+    "mean",
+    "average",
+    "mode",
+    "median",
+    "percentile",
+    "variance",
+    "deviation"
+  ],
+  "author": "Bryce B. Baril",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brycebaril/node-stats-lite/issues"
+  },
+  "engines": {
+    "node": ">=2.0.0"
+  },
+  "dependencies": {
+    "isnumber": "~1.0.0"
+  },
+  "devDependencies": {
+    "tape": "~4.2.0"
+  },
+  "homepage": "https://github.com/brycebaril/node-stats-lite",
+  "_from": "stats-lite@https://registry.npmjs.org/stats-lite/-/stats-lite-2.0.3.tgz",
+  "_resolved": "https://registry.npmjs.org/stats-lite/-/stats-lite-2.0.3.tgz"
+}

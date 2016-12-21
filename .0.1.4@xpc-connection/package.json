@@ -1,0 +1,32 @@
+{
+  "name": "xpc-connection",
+  "version": "0.1.4",
+  "description": "XPC Connection binding for node.js",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandeepmistry/node-xpc-connection.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sandeepmistry/node-xpc-connection/issues"
+  },
+  "keywords": [
+    "XPC",
+    "XPC connection"
+  ],
+  "author": "Sandeep Misty <sandeep.mistry@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "os": [
+    "darwin"
+  ],
+  "dependencies": {
+    "nan": "^2.0.5"
+  },
+  "_from": "xpc-connection@0.1.4",
+  "_resolved": "http://registry.npm.taobao.org/xpc-connection/download/xpc-connection-0.1.4.tgz"
+}

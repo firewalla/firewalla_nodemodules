@@ -1,0 +1,45 @@
+{
+  "name": "noop6",
+  "description": "No operation as a module using an arrow function.",
+  "keywords": [
+    "noop6",
+    "no",
+    "operation",
+    "as",
+    "a",
+    "module",
+    "using",
+    "arrow",
+    "functions"
+  ],
+  "license": "MIT",
+  "version": "1.0.4",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IonicaBizau/noop6.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/noop6/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/noop6#readme",
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "build/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "scripts/",
+    "cli.js",
+    "index.js"
+  ],
+  "_from": "noop6@1.0.4",
+  "_resolved": "http://registry.npm.taobao.org/noop6/download/noop6-1.0.4.tgz"
+}

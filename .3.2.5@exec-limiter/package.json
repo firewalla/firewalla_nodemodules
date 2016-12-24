@@ -1,0 +1,53 @@
+{
+  "name": "exec-limiter",
+  "version": "3.2.5",
+  "description": "Limit the shell execution commands to <x> calls same time.",
+  "main": "lib/index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IonicaBizau/node-exec-limiter.git"
+  },
+  "keywords": [
+    "exec",
+    "limiter",
+    "shell"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "contributors": [
+    "Gabriel Petrovay <gabipetrovay@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/node-exec-limiter/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/node-exec-limiter",
+  "dependencies": {
+    "limit-it": "^3.0.0",
+    "typpy": "^2.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "build/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "scripts/",
+    "cli.js",
+    "index.js"
+  ],
+  "_from": "exec-limiter@3.2.5",
+  "_resolved": "http://registry.npm.taobao.org/exec-limiter/download/exec-limiter-3.2.5.tgz"
+}

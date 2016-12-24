@@ -1,0 +1,47 @@
+{
+  "name": "obj-def",
+  "description": "Easily set default fields in objects.",
+  "keywords": [
+    "obj",
+    "def",
+    "easily",
+    "set",
+    "default",
+    "fields",
+    "in",
+    "objects"
+  ],
+  "license": "MIT",
+  "version": "1.0.3",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IonicaBizau/obj-def.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/obj-def/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/obj-def#readme",
+  "dependencies": {
+    "deffy": "^2.2.2"
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "build/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "scripts/",
+    "cli.js",
+    "index.js"
+  ],
+  "_from": "obj-def@1.0.3",
+  "_resolved": "http://registry.npm.taobao.org/obj-def/download/obj-def-1.0.3.tgz"
+}

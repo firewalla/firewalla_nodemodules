@@ -1,0 +1,37 @@
+{
+  "name": "network",
+  "version": "0.3.1",
+  "description": "Cross platform network utilities for Node.js (gateway_ip, MAC address, etc)",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "network": "./bin/network"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "needle": "1.1.2",
+    "wmic": "^0.1.0"
+  },
+  "author": {
+    "name": "Tomas Pollak",
+    "email": "tomas@forkhq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomas/network.git"
+  },
+  "license": "MIT",
+  "gitHead": "08702539869c7aebfddb1bc68dac36c463acfb6d",
+  "readme": "Network Utilies for Node.js\n===========================\n\n# Install\n\n    $ npm install network\n\n# Usage\n\n## Get public IP\n\nReturns your public IP address, as reported by DynDNS.org or other services.\n\n``` js\nvar network = require('network');\n\nnetwork.get_public_ip(function(err, ip) {\n  console.log(err || ip); // should return your public IP address\n})\n```\n\n## Get private IP\n\nReturns the IP address assigned to your first active network inteface.\n\n``` js\nnetwork.get_private_ip(function(err, ip) {\n  console.log(err || ip); // err may be 'No active network interface found'.\n})\n```\n\n## Get gateway IP\n\nReturns the IP of the gateway that your active network interface is linked to.\n\n``` js\nnetwork.get_gateway_ip(function(err, ip) {\n  console.log(err || ip); // err may be 'No active network interface found.'\n})\n```\n## Get active interface\n\nReturns the IP, MAC address and interface type for the active network\ninterface. On OS X and Linux you also get the IP of its assigned gateway.\n\n``` js\nnetwork.get_active_interface(function(err, obj) {\n\n  /* obj should be:\n\n  { name: 'eth0',\n    ip_address: '10.0.1.3',\n    mac_address: '56:e5:f9:e4:38:1d',\n    type: 'Wired',\n    netmask: '255.255.255.0',\n    gateway_ip: '10.0.1.1' }\n\n  */\n})\n```\n\n## Get interfaces list\n\nReturns list of network interfaces, including MAC addresses and the such, just\nas in the example above.\n\n``` js\nnetwork.get_interfaces_list(function(err, list) {\n\n  /* list should be:\n\n  [{\n    name: 'eth0',\n    ip_address: '10.0.1.3',\n    mac_address: '56:e5:f9:e4:38:1d',\n    type: 'Wired',\n    netmask: '255.255.255.0',\n    gateway_ip: '10.0.1.1' // only on OS X and Linux\n   },\n   { ... }, { ... }]\n\n  */\n})\n```\n\n# TODO\n\n- Find a way to get the gateway IP for interfaces on Windows. Help wanted!\n\n# Copyright\n\nWritten by Tomás Pollak. Copyright (c) Fork, Ltd.\n\n# License\n\nMIT.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/tomas/network/issues"
+  },
+  "homepage": "https://github.com/tomas/network#readme",
+  "_id": "network@0.3.1",
+  "_shasum": "45041062a61d7817539c3a05cf5931bd196c1df8",
+  "_from": "git+https://git@github.com/melvinto/network.git",
+  "_resolved": "git+https://git@github.com/melvinto/network.git#08702539869c7aebfddb1bc68dac36c463acfb6d"
+}

@@ -1,0 +1,123 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/MelvinTo/node-geoip-country-only.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/MelvinTo/node-geoip-country-only.git",
+        "spec": "git+https://github.com/MelvinTo/node-geoip-country-only.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:MelvinTo/node-geoip-country-only.git",
+          "sshUrl": "git+ssh://git@github.com/MelvinTo/node-geoip-country-only.git",
+          "httpsUrl": "git+https://github.com/MelvinTo/node-geoip-country-only.git",
+          "gitUrl": "git://github.com/MelvinTo/node-geoip-country-only.git",
+          "shortcut": "github:MelvinTo/node-geoip-country-only",
+          "directUrl": "https://raw.githubusercontent.com/MelvinTo/node-geoip-country-only/master/package.json"
+        }
+      },
+      "/Users/tt/Dropbox/ws/nm"
+    ]
+  ],
+  "_from": "git+https://github.com/MelvinTo/node-geoip-country-only.git",
+  "_id": "geoip-country-only@1.1.8",
+  "_inCache": true,
+  "_location": "/geoip-country-only",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/MelvinTo/node-geoip-country-only.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/MelvinTo/node-geoip-country-only.git",
+    "spec": "git+https://github.com/MelvinTo/node-geoip-country-only.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:MelvinTo/node-geoip-country-only.git",
+      "sshUrl": "git+ssh://git@github.com/MelvinTo/node-geoip-country-only.git",
+      "httpsUrl": "git+https://github.com/MelvinTo/node-geoip-country-only.git",
+      "gitUrl": "git://github.com/MelvinTo/node-geoip-country-only.git",
+      "shortcut": "github:MelvinTo/node-geoip-country-only",
+      "directUrl": "https://raw.githubusercontent.com/MelvinTo/node-geoip-country-only/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "git+https://github.com/MelvinTo/node-geoip-country-only.git#e0f022f47f09c0b6378db9609ea81da9aad27e5d",
+  "_shasum": "2a952639775659b9cadf6ac763afa8f136f55b4e",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/MelvinTo/node-geoip-country-only.git",
+  "_where": "/Users/tt/Dropbox/ws/nm",
+  "author": {
+    "name": "Philip Tellis",
+    "email": "philip@bluesmoon.info",
+    "url": "http://bluesmoon.info/"
+  },
+  "bugs": {
+    "url": "https://github.com/strml/node-geoip-country-only/issues"
+  },
+  "config": {
+    "update": true
+  },
+  "contributors": [
+    {
+      "name": "Philip Tellis",
+      "email": "philip@bluesmoon.info",
+      "url": "http://bluesmoon.info/"
+    }
+  ],
+  "dependencies": {
+    "async": "~1.5.2",
+    "colors": "1.1.2",
+    "glob": "~7.0.3",
+    "iconv-lite": "~0.4.13",
+    "lazy": "~1.0.11",
+    "rimraf": "~2.5.2",
+    "unzip": "~0.1.11"
+  },
+  "description": "Stripped down version of geoip, supporting only country lookup. Based on arve0 patch.",
+  "devDependencies": {
+    "nodeunit": "~0.9.1"
+  },
+  "engines": {
+    "node": ">=0.6.3"
+  },
+  "files": [
+    "lib/",
+    "data/",
+    "test/",
+    "scripts/"
+  ],
+  "gitHead": "e0f022f47f09c0b6378db9609ea81da9aad27e5d",
+  "homepage": "https://github.com/strml/node-geoip-country-only",
+  "keywords": [
+    "geo",
+    "geoip",
+    "ip",
+    "ipv4",
+    "geolookup",
+    "maxmind",
+    "geolite",
+    "country"
+  ],
+  "main": "lib/geoip.js",
+  "name": "geoip-country-only",
+  "optionalDependencies": {},
+  "readme": "GeoIP-country-only\n=======================\n\nStripped down node-geoip. Only supports country lookup and IPv4.\n\nSoftware is written by Philip Tellis <philip@bluesmoon.info>, latest version is available at https://github.com/bluesmoon/node-geoip\n\nThis is forked from [node-geoip-country](https://github.com/arve0/node-geoip-country).\n\nThis version relies on a `postinstall` hook to download the latest country data over https. It also\nincludes a Node4-compatible `iconv-lite`.\n\nThis repository has rebased out all `data/` files, so its size is only 890kB. `node-geoip` is over 170MB.\n\n\nsynopsis\n--------\n\n```javascript\nvar geoip = require('geoip-lite');\n\nvar ip = \"207.97.227.239\";\nvar geo = geoip.lookup(ip);\n\nconsole.log(geo);\n{ range: [ 3479299040, 3479299071 ],\n  country: 'US',\n  region: '' }\n```\n\ninstallation\n------------\n### 1. get the library\n\n    $ npm install geoip-country-only\n\n### 2. get the datafiles\n\nThe data files will be updated automatically on `postinstall`. You can update them yourself\nby running `npm run-script updatedb` (recommended on CI servers to bust cache).\n\nAPI\n---\n\n### Looking up an IP address ###\n\nIf you have an IP address in dotted quad notation, IPv6 colon notation, or a 32 bit unsigned integer (treated\nas an IPv4 address), pass it to the `lookup` method.  Note that you should remove any `[` and `]` around an\nIPv6 address before passing it to this method.\n\n```javascript\nvar geo = geoip.lookup(ip);\n```\n\nIf the IP address was found, the `lookup` method returns an object with the following structure:\n\n```javascript\n{\n   range: [ <low bound of IP block>, <high bound of IP block> ],\n   country: 'XX',                 // 2 letter ISO-3166-1 country code\n}\n```\n\nThe actual values for the `range` array should be considered internal to `geoip-lite`.\nTo get a human readable format, pass them to `geoip.pretty()`\n\nIf the IP address was not found, the `lookup` returns `null`\n\n### Pretty printing an IP address ###\n\nIf you have a 32 bit unsigned integer, or a number returned as part of the `range` array from the `lookup` method,\nthe `pretty` method can be used to turn it into a human readable string.\n\n```javascript\n    console.log(\"The IP is %s\", geoip.pretty(ip));\n```\n\nThis method returns a string if the input was in a format that `geoip-lite` can recognise, else it returns the\ninput itself.\n\n### Start and stop watching for data updates ###\n\nIf you have a server running `geoip-lite`, and you want to update its geo data without a restart, you can enable\nthe data watcher to automatically refresh in-memory geo data when a file changes in the data directory.\n\n```javascript\ngeoip.startWatchingDataUpdate();\n```\n\nThis tool can be used with `npm run-script updatedb` to periodically update geo data on a running server.\n\n\nBuilt-in Updater\n----------------\n\nThis package contains an update script that can pull the files from MaxMind and handle the conversion from CSV.\nA npm script alias has been setup to make this process easy. Please keep in mind this requires internet and MaxMind\nrate limits that amount of downloads on their servers.\n\n```shell\nnpm run-script updatedb\n```\n\nCaveats\n-------\n\nThis package includes the GeoLite database from MaxMind.  This database is not the most accurate database available,\nhowever it is the best available for free.  You can use the commercial GeoIP database from MaxMind with better\naccuracy by buying a license from MaxMind, and then using the conversion utility to convert it to a format that\ngeoip-lite understands.  You will need to use the `.csv` files from MaxMind for conversion.\n\nReferences\n----------\n  - <a href=\"http://www.maxmind.com/app/iso3166\">Documentation from MaxMind</a>\n  - <a href=\"http://en.wikipedia.org/wiki/ISO_3166\">ISO 3166 (1 & 2) codes</a>\n  - <a href=\"http://en.wikipedia.org/wiki/List_of_FIPS_region_codes\">FIPS region codes</a>\n\nCopyright\n---------\n\n`geoip-lite` is Copyright 2011-2012 Philip Tellis <philip@bluesmoon.info> and the latest version of the code is\navailable at https://github.com/bluesmoon/node-geoip\n\nLicense\n-------\n\nThere are two licenses for the code and data.  See the [LICENSE](https://github.com/bluesmoon/node-geoip/blob/master/LICENSE) file for details.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strml/node-geoip-country-only.git"
+  },
+  "scripts": {
+    "test": "nodeunit --reporter=minimal test/tests.js",
+    "updatedb": "node scripts/updatedb.js",
+    "updatedb-debug": "node scripts/updatedb.js debug"
+  },
+  "version": "1.1.8"
+}

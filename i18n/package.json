@@ -1,0 +1,80 @@
+{
+  "name": "i18n",
+  "description": "lightweight translation module with dynamic json storage",
+  "version": "0.8.3",
+  "homepage": "http://github.com/mashpie/i18n-node",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mashpie/i18n-node.git"
+  },
+  "author": {
+    "name": "Marcus Spiegel",
+    "email": "marcus.spiegel@gmail.com"
+  },
+  "main": "./index",
+  "keywords": [
+    "template",
+    "i18n",
+    "l10n"
+  ],
+  "directories": {
+    "lib": "."
+  },
+  "dependencies": {
+    "debug": "*",
+    "make-plural": "^3.0.3",
+    "math-interval-parser": "^1.1.0",
+    "messageformat": "^0.3.1",
+    "mustache": "*",
+    "sprintf-js": ">=1.0.3"
+  },
+  "devDependencies": {
+    "async": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "jshint": "*",
+    "mocha": "*",
+    "should": "*",
+    "sinon": "*",
+    "url": "^0.11.0",
+    "zombie": "*"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "jshint": "jshint --verbose .",
+    "test": "npm run jshint && make test",
+    "test-ci": "npm run jshint && istanbul cover ./node_modules/mocha/bin/_mocha"
+  },
+  "license": "MIT",
+  "gitHead": "523fa8e6f41850b793120c63c8392049b94f3e49",
+  "bugs": {
+    "url": "https://github.com/mashpie/i18n-node/issues"
+  },
+  "_id": "i18n@0.8.3",
+  "_shasum": "2d8cf1c24722602c2041d01ba6ae5eaa51388f0e",
+  "_from": "i18n@latest",
+  "_npmVersion": "3.8.5",
+  "_nodeVersion": "5.5.0",
+  "_npmUser": {
+    "name": "mashpie",
+    "email": "marcus.spiegel@gmail.com"
+  },
+  "dist": {
+    "shasum": "2d8cf1c24722602c2041d01ba6ae5eaa51388f0e",
+    "tarball": "https://registry.npmjs.org/i18n/-/i18n-0.8.3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "mashpie",
+      "email": "marcus.spiegel@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/i18n-0.8.3.tgz_1466502296821_0.9116967464797199"
+  },
+  "_resolved": "https://registry.npmjs.org/i18n/-/i18n-0.8.3.tgz",
+  "readme": "ERROR: No README data found!"
+}

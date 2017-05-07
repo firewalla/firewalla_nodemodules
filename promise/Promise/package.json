@@ -1,0 +1,57 @@
+{
+  "name": "Promise",
+  "version": "1.0.5",
+  "description": "Basic JS Promise Implementation for funzzies Open to suggestions for improvements.",
+  "main": "lib/Promise.js",
+  "scripts": {
+    "test": "babel-node src/test/main.js",
+    "dev": "nodemon src/test/main.js --exec babel-node",
+    "start": "babel-node src/Promise.js",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanlinnane/Promise-lite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.14.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "nodemon": "^1.10.2"
+  },
+  "gitHead": "82631bc94e3e5e90d3b48f33dbba8e041c8e2aaa",
+  "bugs": {
+    "url": "https://github.com/ryanlinnane/Promise-lite/issues"
+  },
+  "homepage": "https://github.com/ryanlinnane/Promise-lite#readme",
+  "_id": "Promise@1.0.5",
+  "_shasum": "c93d47cf00c89a85551392657c31c21826644523",
+  "_from": "Promise@latest",
+  "_npmVersion": "3.3.6",
+  "_nodeVersion": "5.0.0",
+  "_npmUser": {
+    "name": "awhoof",
+    "email": "ryanflinnane@gmail.com"
+  },
+  "dist": {
+    "shasum": "c93d47cf00c89a85551392657c31c21826644523",
+    "tarball": "https://registry.npmjs.org/Promise/-/Promise-1.0.5.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "awhoof",
+      "email": "ryanflinnane@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/Promise-1.0.5.tgz_1473784062699_0.303690527100116"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/Promise/-/Promise-1.0.5.tgz"
+}

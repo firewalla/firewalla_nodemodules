@@ -1,0 +1,61 @@
+{
+  "name": "mac-lookup",
+  "version": "0.1.7",
+  "description": "mac address manufacturer lookup for [node](http://nodejs.org).",
+  "author": {
+    "name": "Ivan Loh"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=testing node_modules/.bin/mocha --recursive"
+  },
+  "dependencies": {
+    "line-reader": "~0.4.0",
+    "request": "~2",
+    "sqlite3": "~3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivan-loh/mac-lookup.git"
+  },
+  "keywords": [
+    "ieee oui lookup",
+    "mac address lookup"
+  ],
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/ivan-loh/mac-lookup/issues"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "should": "^7.1.1"
+  },
+  "gitHead": "fc50f864b1741b3d696520bab614e6566f32cee2",
+  "homepage": "https://github.com/ivan-loh/mac-lookup#readme",
+  "_id": "mac-lookup@0.1.7",
+  "_shasum": "19db1fb2593dabc1e117d353edb0a2aaac06c47d",
+  "_from": "mac-lookup@latest",
+  "_npmVersion": "3.10.3",
+  "_nodeVersion": "6.6.0",
+  "_npmUser": {
+    "name": "ivan-loh",
+    "email": "ivan@eriad.com"
+  },
+  "dist": {
+    "shasum": "19db1fb2593dabc1e117d353edb0a2aaac06c47d",
+    "tarball": "https://registry.npmjs.org/mac-lookup/-/mac-lookup-0.1.7.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "ivan-loh",
+      "email": "ivan@eriad.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/mac-lookup-0.1.7.tgz_1475030326709_0.7938344613648951"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/mac-lookup/-/mac-lookup-0.1.7.tgz",
+  "readme": "ERROR: No README data found!"
+}

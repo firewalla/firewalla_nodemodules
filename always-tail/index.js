@@ -41,7 +41,7 @@ Tail = (function(_super) {
 
         var start = self.bookmarks[block.fd];
 
-	if(!start) {
+	if(typeof start === 'undefined') {
 		return next();
 	}
 

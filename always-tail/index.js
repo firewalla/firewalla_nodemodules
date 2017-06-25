@@ -40,6 +40,11 @@ Tail = (function(_super) {
         if (err) { return next(); };
 
         var start = self.bookmarks[block.fd];
+
+	if(!start) {
+		return next();
+	}
+
         var end = stat.size;
   
         if (end < start) {

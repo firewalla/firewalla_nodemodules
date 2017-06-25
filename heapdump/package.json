@@ -1,0 +1,59 @@
+{
+  "name": "heapdump",
+  "main": "./lib/main",
+  "version": "0.3.9",
+  "description": "Make a dump of the V8 heap for later inspection.",
+  "homepage": "https://github.com/bnoordhuis/node-heapdump",
+  "author": {
+    "name": "Ben Noordhuis",
+    "email": "info@bnoordhuis.nl",
+    "url": "http://bnoordhuis.nl/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bnoordhuis/node-heapdump.git"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC",
+  "scripts": {
+    "test": "tap test/test-*",
+    "install": "node-gyp rebuild"
+  },
+  "devDependencies": {
+    "shelljs": "~0.3.0",
+    "tap": "~0.4.12"
+  },
+  "gypfile": true,
+  "gitHead": "7cf17e9b2a629fa5708717874ced2a7ae6cb2e13",
+  "bugs": {
+    "url": "https://github.com/bnoordhuis/node-heapdump/issues"
+  },
+  "_id": "heapdump@0.3.9",
+  "_shasum": "03c74eb0df5d67be0982e83429ba9c9d2b3b7f78",
+  "_from": "heapdump@latest",
+  "_npmVersion": "4.2.0",
+  "_nodeVersion": "8.0.0-pre",
+  "_npmUser": {
+    "name": "bnoordhuis",
+    "email": "info@bnoordhuis.nl"
+  },
+  "maintainers": [
+    {
+      "name": "bnoordhuis",
+      "email": "info@bnoordhuis.nl"
+    }
+  ],
+  "dist": {
+    "shasum": "03c74eb0df5d67be0982e83429ba9c9d2b3b7f78",
+    "tarball": "https://registry.npmjs.org/heapdump/-/heapdump-0.3.9.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/heapdump-0.3.9.tgz_1491337456977_0.18369206320494413"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/heapdump/-/heapdump-0.3.9.tgz",
+  "readme": "ERROR: No README data found!"
+}

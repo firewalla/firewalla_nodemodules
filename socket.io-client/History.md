@@ -1,4 +1,104 @@
 
+2.0.3 / 2017-06-12
+===================
+
+  * [docs] Add explicit documentation for websocket transport (#1128)
+  * [docs] Update documentation (#1124)
+
+2.0.2 / 2017-06-01
+===================
+
+  * [chore] Bump debug to version 2.6.8 (#1123)
+  * [test] Launch browser tests on localhost by default (#1122)
+  * [fix] Do not update the opts.query reference (#1121)
+
+2.0.1 / 2017-05-09
+===================
+
+(following socket.io version bump)
+
+2.0.0 / 2017-05-09
+===================
+
+`dist/socket.io.js`: 61.1 kB ; `dist/socket.io.slim.js`: 52.8 kB
+
+  * [feat] Move binary detection to the parser (#1103)
+  * [feat] Allow the use of a custom parser (#1075)
+
+  * [fix] Run tests on the minified files (#1042)
+  * [fix] Add nsp prefix to socket.id (#1058)
+
+  * [test] Update browsers matrix (#1059)
+
+  * [chore] Bump engine.io to version 3.1.0 (#1109)
+  * [chore] Bump dev dependencies (#1108)
+  * [chore] Bump debug to version 2.6.4 (#1101)
+  * [chore] Fix dependencies (#1096)
+  * [chore] Bump engine.io-client to version 2.0.2 (#1074)
+  * [chore] Bump socket.io-parser to version 2.3.2 (#1071)
+  * [chore] Bump engine.io-client to version 2.0.0 (#1062)
+  * [chore] Update issue template with fiddle (#1057)
+
+  * [docs] Fix messed events documentation (#1089)
+  * [docs] Fix Manager constructor documentation (#1093)
+  * [docs] Fix format in API.md (#1090)
+  * [docs] Add note regarding the Emitter class (#1079)
+  * [docs] Add missing path option in the documentation (#1078)
+  * [docs] Fix typo (#1076)
+  * [docs] Fix typo (#1066)
+  * [docs] Add `connect_error` and `connect_timeout` events (#1051)
+  * [docs] API documentation (#1049)
+
+1.7.2 / 2016-12-11
+===================
+
+  * [chore] Bump engine.io-client to version 1.8.2 (#1044)
+  * [chore] Speed up lint by avoiding '**/*.js' matching pattern (#1043)
+
+1.7.1 / 2016-11-28
+==================
+
+  * [docs] Add saucelabs browser matrix in README (#1035)
+  * [fix] Fix json import in slim build (#1036)
+
+1.7.0 / 2016-11-27
+==================
+
+  * [chore] Move generated files to `dist` folder (#1025)
+  * [chore] Provide a slim build without JSON3 and debug (#1030)
+  * [chore] Bump engine.io-client to 1.8.1 (#1032)
+
+1.6.0 / 2016-11-20
+==================
+
+  * [feature] emit sourcemap for socket.io.js (#953)
+  * [feature] Support minified `socket.io.min.js` (#1021)
+  * [chore] Bump dependencies (#1026)
+
+1.5.1 / 2016-10-24
+==================
+
+  * [chore] Disable AMD for json3 (#1005)
+  * [chore] Bump socket.io-parser to 2.3.0 (#1009)
+  * [chore] Bump engine.io-client to 1.7.1 (#1010)
+  * [chore] Update zuul browser settings (#1011)
+  * [chore] Add Github issue and PR templates (#1013)
+  * [chore] Bump engine.io-client to 1.7.2 and socket.io-parser to 2.3.1 (#1015)
+
+1.5.0 / 2016-10-06
+==================
+
+  * [fix] Fix query string management (#943)
+  * [chore] Add gulp & babel in the build process (#940)
+  * [chore] Add eslint (#951)
+  * [chore] bump zuul (#958)
+  * [chore] Remove jspm browser config (#957)
+  * [chore] Update zuul browser settings following EOL notices (#985)
+  * [chore] Bump zuul to 3.11.0 & zuul-ngrok to 4.0.0 (#997)
+  * [chore] reference build badge to master branch (#967)
+  * [chore] Bump engine.io-client to 1.7.0 (#996)
+  * [chore] Restrict files included in npm package (#998)
+
 1.4.8 / 2016-06-23
 ==================
 

@@ -1,0 +1,92 @@
+{
+  "name": "geoip-lite",
+  "version": "1.2.1",
+  "description": "A light weight native JavaScript implementation of GeoIP API from MaxMind",
+  "keywords": [
+    "geo",
+    "geoip",
+    "ip",
+    "ipv4",
+    "ipv6",
+    "geolookup",
+    "maxmind",
+    "geolite"
+  ],
+  "homepage": "https://github.com/bluesmoon/node-geoip",
+  "author": {
+    "name": "Philip Tellis",
+    "email": "philip@bluesmoon.info",
+    "url": "http://bluesmoon.info/"
+  },
+  "files": [
+    "lib/",
+    "data/",
+    "test/",
+    "scripts/"
+  ],
+  "main": "lib/geoip.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bluesmoon/node-geoip.git"
+  },
+  "engines": {
+    "node": ">=5.10.0"
+  },
+  "scripts": {
+    "test": "nodeunit --reporter=minimal test/tests.js",
+    "updatedb": "node scripts/updatedb.js",
+    "updatedb-debug": "node scripts/updatedb.js debug"
+  },
+  "dependencies": {
+    "async": "^2.1.1",
+    "colors": "^1.1.2",
+    "glob": "^7.1.1",
+    "iconv-lite": "^0.4.13",
+    "lazy": "^1.0.11",
+    "rimraf": "^2.5.2",
+    "unzip": "^0.1.11"
+  },
+  "config": {
+    "update": true
+  },
+  "devDependencies": {
+    "nodeunit": "^0.10.2"
+  },
+  "license": "Apache-2.0",
+  "contributors": [
+    {
+      "name": "Philip Tellis",
+      "email": "philip@bluesmoon.info",
+      "url": "http://bluesmoon.info/"
+    }
+  ],
+  "gitHead": "ede13b56a6f943c316bd501dc36a0c4c1cfb53c0",
+  "bugs": {
+    "url": "https://github.com/bluesmoon/node-geoip/issues"
+  },
+  "_id": "geoip-lite@1.2.1",
+  "_shasum": "39c48ef93e498a259ece46bc9e98cf3ddb680d8b",
+  "_from": "geoip-lite@latest",
+  "_npmVersion": "4.2.0",
+  "_nodeVersion": "7.9.0",
+  "_npmUser": {
+    "name": "bluesmoon",
+    "email": "philip.tellis@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "bluesmoon",
+      "email": "philip@bluesmoon.info"
+    }
+  ],
+  "dist": {
+    "shasum": "39c48ef93e498a259ece46bc9e98cf3ddb680d8b",
+    "tarball": "https://registry.npmjs.org/geoip-lite/-/geoip-lite-1.2.1.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/geoip-lite-1.2.1.tgz_1493913672258_0.6704437606967986"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/geoip-lite/-/geoip-lite-1.2.1.tgz"
+}
